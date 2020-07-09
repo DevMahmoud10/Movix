@@ -9,6 +9,9 @@ autopep8 = "*"
 [packages]
 flask = "==1.1.2"
 flask-mongoengine = "*"
+flask-bcrypt = "*"
+flask-restful = "*"
+flask-jwt-extended = "*"
 
 [requires]
 python_version = "3.7"

@@ -4,11 +4,12 @@ from resources.routes import init_routes
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
 from flask_bcrypt import Bcrypt
+from resources.errors import errors
 
 app = Flask(__name__)
 app.config.from_envvar('ENV_FILE_LOCATION')
 
-api = Api(app)
+api = Api(app, errors=errors)
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 

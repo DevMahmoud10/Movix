@@ -14,9 +14,6 @@ api = Api(app, errors=errors)
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 mail= Mail(app)
-
-app.config['MONGODB_SETTINGS'] = {
-    'host': 'mongodb://localhost/movix_db'}
     
 from resources.routes import init_routes
 init_movix_db(app)

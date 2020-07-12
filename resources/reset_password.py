@@ -42,7 +42,6 @@ class ForgotPassword(Resource):
 
 class ResetPassword(Resource):
     def post(self):
-        url = request.host_url + 'reset/'
         try:
             body = request.get_json()
             reset_token = body.get('reset_token')
